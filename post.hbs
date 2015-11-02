@@ -49,20 +49,30 @@
                     {{#author}}
                     <section class="author-info">
 
+                        {{# if url}}
                         <a href="{{url}}">
                             <img class="author-image author-info__image" src="{{image}}" alt="{{image.alt}}" />
                         </a>
+                        {{/if}}
 
+                        {{# if name}}
                         <span class="author-info__by">Written By</span>
-
                         <h2 class="author-info__name"><a href="{{url}}">{{name}}</a></h2>
+                        {{/if}}
 
+                        {{#if bio}}
                         <p>
                             {{ bio }}
                         </p>
+                        {{/if}}
 
+                        {{#if website}}
                         <a class="author-info__website icon-link" href="{{website}}">{{website}}</a>
+                        {{/if}}
+
+                        {{#if location}}
                         <span class="author-info__location icon-pin-map">{{location}}</span>
+                        {{/if}}
 
                     </section>
                     {{/author}}
