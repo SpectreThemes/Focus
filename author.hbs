@@ -1,0 +1,46 @@
+{{!< default}}
+<main>
+
+	{{#author}}
+
+		<header class="hero" {{#if cover}}style="background-image: url('{{cover}}')"{{/if}}>
+
+			<img class="author-image" src="{{image}}" alt="Picture of {{name}}" />
+
+			<h1 class="container container--wide">{{name}}</h1>
+
+			<div class="container container--thin">
+				{{bio}}
+			</div>
+
+		</header>
+
+	{{/author}}
+
+	<div class="container container--wide pad--vertical">
+
+		{{#foreach posts}}
+		<article class="post-listing">
+			<div class="post-listing__media">
+				{{#if image}}
+				<a class="square" href="{{url}}">
+					<img class="post-listing__image" src="{{image}}" alt="" />
+				</a>
+				{{/if}}
+			</div>
+			<div class="post-listing__body">
+				<h3 class="post-listing__title">
+					<a href="{{url}}">{{title}}</a>
+				</h3>
+				<time class="post-listing__date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+				<p class="post-listing__excerpt">{{excerpt words="43"}}&hellip;</p>
+				<a href="{{url}}" class="post-listing__button button button--small">Read More</a>
+			</div>
+		</article>
+		{{/foreach}}
+
+		{{pagination}}
+
+	</div>
+
+</main>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900|Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/vendor.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/icons.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/index.css"}}" />
+
+    {{ghost_head}}
+
+</head>
+<body class="{{body_class}}" id="nav">
+    <div id="all">
+        <header class="site-header">
+            <div class="site-header__icons">
+                <a href="{{@blog.url}}" class="blog-logo">
+                    <img class="blog-logo__image" src="{{@blog.logo}}" alt="{{@blog.name}}" />
+                </a>
+                <a href="#nav" class="icon-menu hamburger">Menu</a>
+            </div>
+            <nav class="primary-nav">
+                <div class="container container--wide">
+                    {{navigation}}
+                </div>
+            </nav>
+        </header>
+
+        {{{body}}}
+
+        <footer class="site-footer container container--wide">
+
+            <a class="credit-link" href="https://specturethemes.com">by Specture Themes</a>
+
+            <nav class="footer-nav">
+                <a class="footer-nav__item" href="{{@blog.url}}">Home</a>
+                <a class="footer-nav__item" href="{{@blog.url}}/#all">All Posts</a>
+            </nav>
+
+            <section class="copyright-notice">
+                <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
+            </section>
+
+        </footer>
+
+    </div>
+    <script type="text/javascript" src="{{asset "js/vendor.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    {{ghost_foot}}
+</body>
+</html>

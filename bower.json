@@ -1,0 +1,33 @@
+{
+  "name": "focus",
+  "description": "Ghost Theme",
+  "main": "index.hbs",
+  "authors": [
+    "Joel Drapper"
+  ],
+  "license": "LicenseRef-LICENSE",
+  "keywords": [
+    "focus",
+    "ghost",
+    "theme",
+    "ghost",
+    "photography"
+  ],
+  "homepage": "https://github.com/joeldrapper/focus",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "~3.0.3",
+    "jquery.fitvids": "fitvids#~1.1.0",
+    "owl.carousel": "~2.0.0-beta.3",
+    "jQuery-widowFix": "https://github.com/matthewlein/jQuery-widowFix.git#~1.3.2",
+    "prism": "~1.3.0"
+  }
+}

@@ -1,0 +1,31 @@
+{{!< default}}
+<main>
+    <div class="hero">
+        <h1>All Posts</h1>
+    </div>
+    <div class="container container--wide pad--vertical">
+
+		{{#foreach posts}}
+		<article class="post-listing">
+			<div class="post-listing__media">
+				{{#if image}}
+				<a class="square" href="{{url}}">
+					<img class="post-listing__image" src="{{image}}" alt="" />
+				</a>
+				{{/if}}
+			</div>
+			<div class="post-listing__body">
+				<h3 class="post-listing__title">
+					<a href="{{url}}">{{title}}</a>
+				</h3>
+				<time class="post-listing__date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+				<p class="post-listing__excerpt">{{excerpt words="43"}}&hellip;</p>
+				<a href="{{url}}" class="post-listing__button button button--small">Read More</a>
+			</div>
+		</article>
+		{{/foreach}}
+
+		{{pagination}}
+
+	</div>
+</main>

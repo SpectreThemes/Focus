@@ -1,0 +1,76 @@
+{{!< default}}
+<main>
+    {{#post}}
+
+    <article class="{{post_class}}">
+
+        <header class="hero {{^if image}}no-image{{/if}}" {{#if image}}style="background-image: url('{{image}}')"{{/if}}>
+
+            <time class="post-date container container--thin" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+
+            <h1 class="post-title container container--wide">{{title}}</h1>
+
+            {{#author}}
+                <a class="author" href="{{url}}">
+                    <img class="author__image" src="{{image}}" alt="{{name}}" />
+                    by
+                    <span class="author__name">{{name}}</span>
+                </a>
+            {{/author}}
+
+        </header>
+
+        <section class="container container--thin content">
+            {{content}}
+        </section>
+
+        <footer>
+            <div class="container container--wide">
+
+                {{#if tags}}
+
+                <hr>
+
+                <ul class="tags">
+                    {{#foreach tags}}
+                    <li class="tags__tag">
+                        <a href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
+                    </li>
+                    {{/foreach}}
+                </ul>
+                {{/if}}
+
+                <div id="disqus_thread"></div>
+
+            </div>
+
+            <div class="background-dark pad--vertical">
+                <div class="container container--thin">
+                    {{#author}}
+                    <section class="author-info">
+
+                        <a href="{{url}}">
+                            <img class="author-image author-info__image" src="{{image}}" alt="{{image.alt}}" />
+                        </a>
+
+                        <span class="author-info__by">Written By</span>
+
+                        <h2 class="author-info__name"><a href="{{url}}">{{name}}</a></h2>
+
+                        <p>
+                            {{ bio }}
+                        </p>
+
+                        <a class="author-info__website icon-link" href="{{website}}">{{website}}</a>
+                        <span class="author-info__location icon-pin-map">{{location}}</span>
+
+                    </section>
+                    {{/author}}
+                </div>
+            </div>
+        </footer>
+
+    </article>
+
+    {{/post}}
+</main>
