@@ -45,18 +45,15 @@
 	text-transform: uppercase;
 	font-weight: bold;
 	display: inline-block;
-	padding: 0.6em 1em;
+	padding: 0.6em 1.3em;
 	border: 2px solid #000;
 	color: #000;
 	letter-spacing: 0.05em;
+	font-size: 0.75em;
 
 	&:hover {
 		background-color: #000;
 		color: #fff;
-	}
-
-	&--small {
-		font-size: 0.75em;
 	}
 
 	&--white {
