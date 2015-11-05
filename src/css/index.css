@@ -20,12 +20,14 @@ $fs-largest: 2.369rem;
 /* Line Height */
 $lh-tightest: 1;
 $lh-tigher: 1.333;
-$lh-base: 1.777;
-$lh-loose: 1.8;
-$lh-loosest: 2.369;
+$lh-tight: 1.6;
+$lh-base: 1.888;
+$lh-loose: 2.369;
 
 /* Letter Spacing */
 $ls-base: 0;
+$ls-loose: 0.05em;
+$ls-looser: 0.1em;
 
 /* Imports */
 @import 'icons.css';

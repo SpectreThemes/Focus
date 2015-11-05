@@ -24,6 +24,11 @@
 	text-align: center;
 	position: relative;
 	padding: 3rem 0;
+	line-height: $lh-tight;
+
+	h1 {
+		line-height: $lh-tightest;
+	}
 
 	&--full {
 		min-height: 100vh;
@@ -56,6 +61,11 @@
 		color: #fff;
 	}
 
+	&--space {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
 	&--white {
 		border-color: #fff;
 		color: #fff;
@@ -69,7 +79,7 @@
 
 .tags {
 	list-style-type: none;
-	margin: 0;
+	margin: 1rem 0;
 	padding: 0;
 
 	&__tag {
@@ -101,10 +111,15 @@
 
 .author-image {
 	@extend .round;
-	max-width: 6rem;
+	max-width: 5rem;
 }
 
 .content {
+
+	a {
+		color: #2375DF;
+		border-bottom: 1px solid rgba(#2375DF, 0.5);
+	}
 
 	h1,
 	h2,
@@ -211,5 +226,26 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+}
+
+
+.author {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__image {
+		@extend .round;
+		width: 1.777rem !important;
+		float: left;
+		margin-right: 1rem;
+	}
+
+	&__name {
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: $ls-looser;
+		font-size: $fs-small;
 	}
 }
