@@ -4,14 +4,14 @@
 
     <article class="{{post_class}}">
 
-        <header class="hero {{^if image}}no-image{{/if}}" {{#if image}}style="background-image: url('{{image}}')"{{/if}}>
+        <header class="hero {{#if image}}vignette{{else}}no-image{{/if}}" {{#if image}}style="background-image: url('{{image}}')"{{/if}}>
 
-            <time class="post-date container container--thin" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+            <time class="post-date container container--thin {{#if image}}vignette--lift{{/if}}" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
 
-            <h1 class="post-title container container--wide">{{title}}</h1>
+            <h1 class="post-title container container--wide {{#if image}}vignette--lift{{/if}}">{{title}}</h1>
 
             {{#author}}
-                <a class="author" href="{{url}}">
+                <a class="author {{#if image}}vignette--lift{{/if}}" href="{{url}}">
                     <img class="author__image" src="{{image}}" alt="{{name}}" />
                     <span class="author__name">{{name}}</span>
                 </a>
