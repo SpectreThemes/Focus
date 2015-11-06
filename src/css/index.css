@@ -1,11 +1,12 @@
 @lost flexbox flex;
 @lost gutter 2rem;
 
-$baseline: 1.8rem;
-
 /* Colours */
 $coal: #1B1B1B;
 $mud: #363636;
+
+/* Baseline */
+$baseline: 1.8rem;
 
 /* Fonts */
 $font-primary: 'Lora', serif;
@@ -19,14 +20,6 @@ $fs-large: 1.2rem;
 $fs-base: 1rem;
 $fs-small: 0.833rem;
 $fs-tiny: 0.694rem;
-
-
-/* Line Height */
-$lh-tightest: 1;
-$lh-tigher: 1.333;
-$lh-tight: 1.6;
-$lh-base: 1.888;
-$lh-loose: 2.369;
 
 /* Letter Spacing */
 $ls-base: 0;

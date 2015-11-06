@@ -12,7 +12,9 @@ body {
 	transition: 0.318s ease transform;
 }
 
-* {
+*,
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
@@ -34,41 +36,40 @@ a {
 p {
 	margin-top: 0;
 	margin-bottom: $baseline;
-	line-height: inherit;
+	line-height: $baseline;
 }
 
 h1 {
-	font-size: $fs-huge;
 	font-family: $font-secondary;
-	letter-spacing: $ls-loose;
-	line-height: calc($baseline * 1.5);
-	margin-top: calc($baseline * 1.5);
+	font-size: $fs-huge;
+	font-weight: 900;
+	margin-top: $baseline;
 	margin-bottom: calc($baseline / 2);
+	line-height: calc($baseline * 1.5);
 	text-transform: uppercase;
+	letter-spacing: $ls-loose;
 }
 
 h2 {
-	font-size: $fs-largest;
 	font-family: $font-secondary;
+	font-size: $fs-largest;
+	font-weight: 900;
+	margin-top: $baseline;
+	margin-bottom: calc($baseline / 2);
+	line-height: calc($baseline * 1.5);
 	text-transform: uppercase;
 	letter-spacing: $ls-loose;
+}
+
+h3 {
+	font-family: $font-secondary;
+	font-size: $fs-larger;
+	font-weight: 900;
 	margin-top: $baseline;
 	margin-bottom: calc($baseline / 2);
 	line-height: $baseline;
 	text-transform: uppercase;
-}
-
-h3 {
-	font-size: $fs-larger;
-	font-family: $font-secondary;
-	text-transform: uppercase;
-	margin: 0;
-	line-height: $baseline;
-}
-
-h4 {
-	font-size: $fs-large;
-	font-family: $font-secondary;
+	letter-spacing: $ls-loose;
 }
 
 blockquote {
@@ -128,7 +129,7 @@ hr {
 }
 
 pre {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+	margin-top: calc($baseline * 2);
+	margin-bottom: calc($baseline * 2);
 	font-size: $fs-small;
 }
