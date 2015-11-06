@@ -40,4 +40,9 @@ jQuery(document).ready(function($){
 		event.preventDefault();
 		return toggleMenu();
 	});
+
+	$('.js-remove-protocol').each(function(){
+		$this = $(this);
+		$this.text($this.text().replace(/https*\:\/\//g, ''));
+	})
 });
