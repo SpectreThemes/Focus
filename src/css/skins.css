@@ -43,11 +43,3 @@
 		}
 	}
 }
-
-.translucent {
-	opacity: 0.7;
-
-	@media (orientation: portrait) {
-		opacity: 1;
-	}
-}

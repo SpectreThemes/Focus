@@ -1,6 +1,8 @@
 @lost flexbox flex;
 @lost gutter 2rem;
 
+$baseline: 1.8rem;
+
 /* Colours */
 $coal: #1B1B1B;
 $mud: #363636;
@@ -10,12 +12,14 @@ $font-primary: 'Lora', serif;
 $font-secondary: 'Lato', sans-serif;
 
 /* Font Size */
-$fs-smaller: 0.563em;
-$fs-small: 0.75rem;
+$fs-huge: 2.074rem;
+$fs-largest: 1.728rem;
+$fs-larger: 1.44rem;
+$fs-large: 1.2rem;
 $fs-base: 1rem;
-$fs-large: 1.333rem;
-$fs-larger: 1.777rem;
-$fs-largest: 2.369rem;
+$fs-small: 0.833rem;
+$fs-tiny: 0.694rem;
+
 
 /* Line Height */
 $lh-tightest: 1;

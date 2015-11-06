@@ -1,10 +1,10 @@
-:root {
+:root, body {
 	font-family: $font-primary;
 	font-size: responsive 16px 22px;
 	font-range: 480px 2560px;
 	box-sizing: border-box;
 	color: #000000;
-	line-height: 1.888;
+	line-height: 1.8rem;
 	text-rendering: optimizeLegibility;
 }
 
@@ -31,50 +31,44 @@ a {
 	text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
-	letter-spacing: $ls-loose;
+p {
+	margin-top: 0;
+	margin-bottom: $baseline;
+	line-height: inherit;
 }
 
 h1 {
-	font-size: $fs-larger;
+	font-size: $fs-huge;
 	font-family: $font-secondary;
-
-	@media (min-width: 768px) {
-		font-size: $fs-largest;
-	}
+	letter-spacing: $ls-loose;
+	line-height: calc($baseline * 1.5);
+	margin-top: calc($baseline * 1.5);
+	margin-bottom: calc($baseline / 2);
+	text-transform: uppercase;
 }
 
 h2 {
-	font-size: $fs-large;
+	font-size: $fs-largest;
 	font-family: $font-secondary;
 	text-transform: uppercase;
-
-	@media (min-width: 768px) {
-		font-size: $fs-larger;
-	}
+	letter-spacing: $ls-loose;
+	margin-top: $baseline;
+	margin-bottom: calc($baseline / 2);
+	line-height: $baseline;
+	text-transform: uppercase;
 }
 
 h3 {
-	font-size: $fs-base;
+	font-size: $fs-larger;
 	font-family: $font-secondary;
 	text-transform: uppercase;
-
-	@media (min-width: 768px) {
-		font-size: $fs-large;
-	}
+	margin: 0;
+	line-height: $baseline;
 }
 
 h4 {
-	font-size: $fs-base;
+	font-size: $fs-large;
 	font-family: $font-secondary;
-}
-
-p {
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
 }
 
 blockquote {
@@ -97,6 +91,18 @@ blockquote {
 
 	&::before { top: 0; }
 	&::after { bottom: 0; }
+}
+
+ul, ol {
+	margin: $baseline 0;
+	padding: 0;
+}
+
+li {
+	ul, ol {
+		margin: 0;
+		margin-left: 2rem;
+	}
 }
 
 hr {
