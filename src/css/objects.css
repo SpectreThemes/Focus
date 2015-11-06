@@ -184,3 +184,8 @@
 		}
 	}
 }
+
+.fluid-width-video-wrapper {
+	margin-top: calc($baseline * 2);
+	margin-bottom: calc($baseline * 2);
+}
