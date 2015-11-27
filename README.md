@@ -1,4 +1,5 @@
 # Focus
+
 Ghost Theme
 
 ## Development
