@@ -1,6 +1,6 @@
 # Focus
 
-Ghost Theme
+Ghost Theme for Spectre Themes.
 
 ## Development
 
